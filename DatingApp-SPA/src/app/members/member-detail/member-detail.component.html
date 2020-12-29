@@ -7,7 +7,7 @@
       <div class="card">
         <img
           class="card-img-top img-thumbnail"
-          src="{{ user.photoUrl }}"
+          src="{{ user.photoUrl || '../../../../../assets/user.png' }}"
           alt="{{ user.knownAs }}"
         />
         <div class="card-body">
@@ -51,7 +51,7 @@
           </tab>
           <tab heading="Photos">
             <ngx-gallery
-              style="display: inline-block; margin-bottom: 20px;"
+              style="display: inline-block; margin-bottom: 20px"
               [options]="galleryOptions"
               [images]="galleryImages"
               class="ngx-gallery"
