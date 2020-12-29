@@ -33,6 +33,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { MemberEditResolver } from './_resolver/member-edit.resorvel copy';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from './messages/photo-editor/photo-editor.component';
+import { TimeagoModule } from 'ngx-timeago';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -64,6 +65,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    TimeagoModule.forRoot(),
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
     TabsModule.forRoot(),
